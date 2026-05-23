@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Fix for sandboxed environment blocking overrides of window.fetch
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return originalFetch;
+            },
+            set: function(val) {
+              originalFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            var proto = Object.getPrototypeOf(window) || Window.prototype;
+            if (proto) {
+              Object.defineProperty(proto, 'fetch', {
+                get: function() {
+                  return originalFetch;
+                },
+                set: function(val) {
+                  originalFetch = val;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (err) {
+            // Safe fallback
+          }
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLODES | High-Conversion Websites for Local Businesses</title>
+    <script type="module" crossorigin src="/assets/index-JEgsTDxL.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DMRQlqld.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+

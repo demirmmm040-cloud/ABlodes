@@ -1,0 +1,1730 @@
+function Ffe({
+onUnlockMockup:o}
+){
+const[
+c,
+r]
+=E.useState(ia[
+0]
+),
+[
+s,
+h]
+=E.useState(85),
+[
+p,
+y]
+=E.useState(3),
+[
+f,
+M]
+=E.useState([
+"local_seo",
+"before_after"]
+),
+m=_=>{
+r(_),
+_.id==="restaurant"?(y(20),
+h(90)):_.id==="hvac_plumbing"?(y(8),
+h(85)):(y(3),
+h(75))}
+,
+v=_=>{
+M(S=>S.includes(_)?S.filter(z=>z!==_):[
+...S,
+_]
+)}
+,
+x=E.useMemo(()=>{
+const _=Math.round(p*(s*3.8)),
+S=Math.round(_*12),
+z=1.2+f.length*.45,
+T=Math.min(100,
+Math.round(91+(f.includes("local_seo")?8:4))),
+V=Math.round(s/10*z*10)/10;
+return{
+monthlyVisits:_,
+annuallyExtraVisits:S,
+speedRank:T,
+authorityMultiplier:V}
+}
+,
+[
+c,
+s,
+p,
+f]
+);
+return k.jsxs("div",
+{
+className:"grid grid-cols-1 lg:grid-cols-12 gap-8 items-start",
+children:[
+k.jsxs("div",
+{
+className:"lg:col-span-7 flex flex-col gap-6",
+children:[
+k.jsxs("div",
+{
+className:"bg-zinc-950/45 p-6 rounded-2xl border border-zinc-905 flex flex-col gap-4",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center gap-3",
+children:[
+k.jsx("span",
+{
+className:"flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-sm border border-emerald-500/25",
+children:"1"}
+),
+k.jsx("h3",
+{
+className:"text-lg font-medium text-white tracking-tight",
+children:"Select Your Local Business Industry"}
+)]
+}
+),
+k.jsx("div",
+{
+className:"grid grid-cols-2 sm:grid-cols-3 gap-2",
+children:ia.map(_=>{
+const S=c.id===_.id;
+return k.jsxs("button",
+{
+onClick:()=>m(_),
+className:`flex flex-col items-center justify-center p-3.5 rounded-xl border text-center transition-all duration-200 cursor-pointer ${
+S?"bg-zinc-900 border-zinc-700 ring-2 ring-emerald-500 text-white shadow-lg":"bg-zinc-950 border-zinc-900 text-zinc-400 hover:border-zinc-800 hover:text-zinc-200"}
+`,
+children:[
+k.jsx("div",
+{
+className:`p-1.5 rounded-lg mb-2 ${
+S?"text-emerald-400 bg-emerald-500/10":"text-zinc-500"}
+`,
+children:k.jsx(WH,
+{
+name:_.icon,
+className:"w-5 h-5 z-0"}
+)}
+),
+k.jsx("span",
+{
+className:"text-xs font-semibold tracking-tight whitespace-nowrap overflow-hidden text-ellipsis w-full",
+children:_.name}
+)]
+}
+,
+_.id)}
+)}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-950/45 p-6 rounded-2xl border border-zinc-900 flex flex-col gap-5",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center gap-3",
+children:[
+k.jsx("span",
+{
+className:"flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-sm border border-emerald-500/25",
+children:"2"}
+),
+k.jsx("h3",
+{
+className:"text-lg font-medium text-white tracking-tight",
+children:"Calibrate Your Specific Search Target Objectives"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"grid grid-cols-1 md:grid-cols-2 gap-6",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col gap-2.5",
+children:[
+k.jsxs("div",
+{
+className:"flex justify-between items-baseline",
+children:[
+k.jsx("span",
+{
+className:"text-sm text-zinc-300 font-medium",
+children:"Target Local Dominance Factor"}
+),
+k.jsxs("span",
+{
+className:"text-emerald-400 font-mono font-bold text-lg",
+children:[
+s,
+"% Match"]
+}
+)]
+}
+),
+k.jsx("input",
+{
+type:"range",
+min:30,
+max:100,
+step:5,
+value:s,
+onChange:_=>h(Number(_.target.value)),
+className:"w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"}
+),
+k.jsx("span",
+{
+className:"text-[
+11px]
+text-zinc-500 font-mono leading-tight",
+children:"Target ratio of high-intent search terms dominated in your local radius."}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-2.5",
+children:[
+k.jsxs("div",
+{
+className:"flex justify-between items-baseline",
+children:[
+k.jsx("span",
+{
+className:"text-sm text-zinc-300 font-medium",
+children:"Target Action Volume Target"}
+),
+k.jsxs("span",
+{
+className:"text-emerald-400 font-mono font-bold text-lg",
+children:[
+"+",
+p,
+" actions / mo"]
+}
+)]
+}
+),
+k.jsx("input",
+{
+type:"range",
+min:1,
+max:c.id==="restaurant"?120:15,
+step:1,
+value:p,
+onChange:_=>y(Number(_.target.value)),
+className:"w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"}
+),
+k.jsx("span",
+{
+className:"text-[
+11px]
+text-zinc-500 font-mono leading-tight",
+children:"Goal for incremental high-intent reservations/bids submitted via your web infrastructure."}
+)]
+}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-950/45 p-6 rounded-2xl border border-zinc-900 flex flex-col gap-4",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center gap-3",
+children:[
+k.jsx("span",
+{
+className:"flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-sm border border-emerald-500/25",
+children:"3"}
+),
+k.jsxs("div",
+{
+className:"flex flex-col",
+children:[
+k.jsx("h3",
+{
+className:"text-lg font-medium text-white tracking-tight leading-tight",
+children:"Enhance Blueprint Conversion Channels"}
+),
+k.jsx("span",
+{
+className:"text-xs text-zinc-500",
+children:"Enable features below to transform your wireframe structure instantly."}
+)]
+}
+)]
+}
+),
+k.jsx("div",
+{
+className:"flex flex-col gap-2",
+children:Ppe.map(_=>{
+const S=f.includes(_.id);
+return k.jsxs("div",
+{
+onClick:()=>v(_.id),
+className:`flex items-start gap-4 p-3.5 rounded-xl border cursor-pointer select-none transition-all duration-200 ${
+S?"bg-zinc-900/60 border-emerald-500/40 text-white shadow-[
+0_2px_12px_rgba(16,
+185,
+129,
+0.06)]
+":"bg-zinc-950 border-zinc-900 text-zinc-400 hover:border-zinc-850 hover:bg-zinc-900/10"}
+`,
+children:[
+k.jsx("div",
+{
+className:"mt-1 flex items-center justify-center",
+children:k.jsx("div",
+{
+className:`w-4.5 h-4.5 rounded border flex items-center justify-center transition-colors ${
+S?"bg-emerald-500 border-emerald-500 text-zinc-950":"border-zinc-700"}
+`,
+children:S&&k.jsx(bc,
+{
+className:"w-3.5 h-3.5 stroke-[
+3px]
+"}
+)}
+)}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-0.5 flex-1",
+children:[
+k.jsxs("div",
+{
+className:"flex justify-between items-baseline",
+children:[
+k.jsx("span",
+{
+className:`text-xs sm:text-sm font-semibold ${
+S?"text-white":"text-zinc-300"}
+`,
+children:_.label}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+font-mono font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/10 px-2.5 py-0.5 rounded uppercase tracking-wider",
+children:"Immediate Access"}
+)]
+}
+),
+k.jsx("p",
+{
+className:"text-[
+11px]
+sm:text-xs text-zinc-500 font-normal leading-relaxed",
+children:_.description}
+)]
+}
+)]
+}
+,
+_.id)}
+)}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-6",
+children:[
+k.jsxs("div",
+{
+className:"relative overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 rounded-2xl border border-zinc-805 shadow-xl flex flex-col gap-5",
+children:[
+k.jsx("div",
+{
+className:"absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1",
+children:[
+k.jsx("span",
+{
+className:"text-[
+11px]
+tracking-widest text-emerald-400 font-mono font-semibold uppercase",
+children:"Target Blueprint Metrics Exposure Projections"}
+),
+k.jsx("h4",
+{
+className:"text-lg font-medium text-white tracking-tight",
+children:"Organic Search Engagement Index"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"grid grid-cols-2 gap-4",
+children:[
+k.jsxs("div",
+{
+className:"bg-zinc-950/40 p-4 rounded-xl border border-zinc-900 flex flex-col gap-0.5",
+children:[
+k.jsx("span",
+{
+className:"text-xs text-zinc-500 font-mono",
+children:"Monthly Organic Ingest"}
+),
+k.jsxs("span",
+{
+className:"text-xl sm:text-2xl font-bold font-mono text-emerald-450",
+children:[
+"+",
+x.monthlyVisits.toLocaleString(),
+" visits"]
+}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+text-zinc-500 mt-1 leading-tight font-sans",
+children:"Hyper-targeted local views"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-950/40 p-4 rounded-xl border border-zinc-900 flex flex-col gap-0.5",
+children:[
+k.jsx("span",
+{
+className:"text-xs text-zinc-500 font-mono",
+children:"Annualized Reach Spurt"}
+),
+k.jsxs("span",
+{
+className:"text-xl sm:text-2xl font-bold font-mono text-emerald-450",
+children:[
+"+",
+x.annuallyExtraVisits.toLocaleString(),
+" views"]
+}
+),
+k.jsxs("span",
+{
+className:"text-[
+10px]
+text-emerald-450 leading-tight mt-1 flex items-center gap-1 font-mono font-medium",
+children:[
+k.jsx(v2,
+{
+className:"w-3 h-3"}
+),
+"Sustained Visibility"]
+}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-950/80 p-4 rounded-xl border border-emerald-500/10 flex items-center justify-between",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col",
+children:[
+k.jsx("span",
+{
+className:"text-xs text-white font-medium",
+children:"Core Performance Rank"}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+text-zinc-500",
+children:"Static compiled speed indexing code grade"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"text-right",
+children:[
+k.jsxs("span",
+{
+className:"text-lg font-bold font-mono text-emerald-450",
+children:[
+"Score: ",
+x.speedRank,
+"/100"]
+}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+text-zinc-400 block font-mono",
+children:"Optimum Load Pass"}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex items-center justify-between text-xs px-1 font-mono text-zinc-400 border-t border-zinc-900/50 pt-4",
+children:[
+k.jsx("span",
+{
+children:"Aggregated Reach Multiplier"}
+),
+k.jsxs("span",
+{
+className:"text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/10",
+children:[
+x.authorityMultiplier,
+"x Power Factor"]
+}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-950 p-5 rounded-2xl border border-zinc-900 flex flex-col gap-4",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center justify-between",
+children:[
+k.jsxs("h4",
+{
+className:"text-xs tracking-widest text-zinc-405 font-mono font-semibold uppercase flex items-center gap-1.5",
+children:[
+k.jsx(aa,
+{
+className:"w-3.5 h-3.5 text-zinc-400"}
+),
+"Blueprint Layout: ",
+c.name]
+}
+),
+k.jsxs("span",
+{
+className:"text-[
+10px]
+text-emerald-450 font-mono bg-emerald-500/5 px-2 py-0.5 rounded border border-emerald-500/15 flex items-center gap-1",
+children:[
+k.jsx("span",
+{
+className:"w-1.5 h-1.5 rounded-full bg-emerald-550 animate-pulse"}
+),
+"Dynamic UI Sync"]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"rounded-xl border border-zinc-800 bg-zinc-900/20 p-4 flex flex-col gap-3 font-mono text-[
+10px]
+",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center justify-between bg-zinc-900 border border-zinc-800 p-2 rounded-lg text-zinc-300",
+children:[
+k.jsx("span",
+{
+className:"font-bold text-emerald-400",
+children:"BLODES.co/Client"}
+),
+k.jsxs("div",
+{
+className:"flex items-center gap-2",
+children:[
+k.jsx("span",
+{
+className:"w-2.5 h-2.5 rounded bg-amber-500/10 border border-amber-500/25 block"}
+),
+k.jsx("span",
+{
+className:"px-2 py-0.5 bg-emerald-500 text-zinc-950 rounded-[
+4px]
+font-bold font-sans",
+children:"Call Now"}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-900/35 border border-dashed border-zinc-800 p-4 rounded-lg flex flex-col gap-2 relative overflow-hidden",
+children:[
+k.jsx("div",
+{
+className:"absolute inset-0 bg-gradient-to-r from-emerald-500/3 to-transparent"}
+),
+k.jsxs("div",
+{
+className:"font-bold text-white text-[
+11px]
+leading-tight flex items-start gap-1",
+children:[
+k.jsx(WH,
+{
+name:c.icon,
+className:"w-3.5 h-3.5 text-emerald-400 inline shrink-0 mt-0.5"}
+),
+k.jsx("span",
+{
+children:c.heroText}
+)]
+}
+),
+k.jsx("p",
+{
+className:"text-zinc-500 text-[
+9px]
+leading-tight font-sans",
+children:"Compelling custom micro-copy and local authority indicators targeting your core zip codes."}
+),
+k.jsxs("div",
+{
+className:"flex gap-2 mt-1",
+children:[
+k.jsx("div",
+{
+className:"flex-1 bg-emerald-500/15 border border-emerald-500/20 py-1 rounded text-center text-emerald-400 text-[
+9px]
+font-bold",
+children:"⚡ Schedule Instantly"}
+),
+k.jsx("div",
+{
+className:"flex-1 bg-zinc-800 border border-zinc-700 py-1 rounded text-center text-zinc-350 text-[
+9px]
+",
+children:"View Success Gallery"}
+)]
+}
+)]
+}
+),
+f.includes("before_after")&&k.jsxs(oa.div,
+{
+initial:{
+scale:.95,
+opacity:0}
+,
+animate:{
+scale:1,
+opacity:1}
+,
+className:"bg-emerald-950/20 border border-emerald-500/25 p-3 rounded-lg text-[
+9px]
+flex flex-col gap-1.5",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center justify-between",
+children:[
+k.jsxs("span",
+{
+className:"text-emerald-300 font-bold flex items-center gap-1",
+children:[
+k.jsx(I0,
+{
+className:"w-3 h-3 text-emerald-400 animate-pulse"}
+),
+"Interactive Before & After Module"]
+}
+),
+k.jsx("span",
+{
+className:"text-[
+8px]
+bg-emerald-500/10 text-emerald-300 px-1.5 py-0.2 rounded font-sans",
+children:"Active"}
+)]
+}
+),
+k.jsx("div",
+{
+className:"h-5 bg-zinc-905 rounded border border-zinc-800 flex items-center justify-center text-zinc-400 font-sans",
+children:"Slide Divider to Reveal Remodel Craft"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-900/35 p-3 rounded-lg border border-zinc-800/70 flex flex-col gap-1 text-zinc-400",
+children:[
+k.jsx("span",
+{
+className:"font-bold text-zinc-300",
+children:"Highlight Benefits Row:"}
+),
+c.features.slice(0,
+3).map((_,
+S)=>k.jsxs("div",
+{
+className:"flex items-center gap-1.5 text-[
+9px]
+",
+children:[
+k.jsx("span",
+{
+className:"text-emerald-400",
+children:"✓"}
+),
+k.jsx("span",
+{
+className:"text-[
+9px]
+whitespace-nowrap overflow-hidden text-ellipsis w-full",
+children:_}
+)]
+}
+,
+S))]
+}
+),
+f.includes("online_booking")&&k.jsxs(oa.div,
+{
+initial:{
+scale:.95,
+opacity:0}
+,
+animate:{
+scale:1,
+opacity:1}
+,
+className:"bg-emerald-950/20 border border-emerald-500/25 p-3 rounded-lg text-[
+9px]
+flex flex-col gap-2",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center justify-between text-emerald-300 font-bold",
+children:[
+k.jsxs("span",
+{
+className:"flex items-center gap-1",
+children:[
+k.jsx(w0,
+{
+className:"w-3 h-3 text-emerald-400"}
+),
+"24/7 Virtual Booking Scheduler"]
+}
+),
+k.jsx("span",
+{
+className:"text-[
+8px]
+bg-emerald-500/10 text-emerald-300 px-1.5 py-0.2 rounded font-sans",
+children:"Active"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"grid grid-cols-4 gap-1 text-[
+8px]
+text-center font-mono",
+children:[
+k.jsx("span",
+{
+className:"bg-zinc-900 border border-zinc-800 py-1 text-zinc-400 rounded",
+children:"9:00 AM"}
+),
+k.jsx("span",
+{
+className:"bg-zinc-900 border border-zinc-800 py-1 text-zinc-400 rounded",
+children:"11:00 AM"}
+),
+k.jsx("span",
+{
+className:"bg-emerald-500 text-zinc-950 font-bold py-1 rounded",
+children:"2:30 PM"}
+),
+k.jsx("span",
+{
+className:"bg-zinc-900 border border-zinc-800 py-1 text-zinc-400 rounded",
+children:"4:15 PM"}
+)]
+}
+)]
+}
+),
+f.includes("review_loop")&&k.jsxs(oa.div,
+{
+initial:{
+scale:.95,
+opacity:0}
+,
+animate:{
+scale:1,
+opacity:1}
+,
+className:"bg-emerald-950/20 border border-emerald-500/25 p-3 rounded-lg text-[
+9px]
+flex flex-col gap-1.5",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center justify-between",
+children:[
+k.jsxs("span",
+{
+className:"text-emerald-300 font-bold flex items-center gap-1",
+children:[
+k.jsx(q0,
+{
+className:"w-3 h-3 text-emerald-400"}
+),
+"Automated Google Stars Ingestion"]
+}
+),
+k.jsx("span",
+{
+className:"text-[
+8px]
+bg-emerald-500/10 text-emerald-300 px-1.5 py-0.2 rounded font-sans",
+children:"Active"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex items-center gap-1 font-sans",
+children:[
+k.jsx("span",
+{
+className:"text-amber-400",
+children:"★★★★★"}
+),
+k.jsx("span",
+{
+className:"text-zinc-400 text-[
+8px]
+",
+children:'"Absolutely perfect service and fast communication!"'}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"bg-zinc-900 border border-emerald-500/20 p-3 rounded-lg text-center flex flex-col gap-1 items-center",
+children:[
+k.jsx("span",
+{
+className:"text-[
+9px]
+text-zinc-300",
+children:'"Submit Your Custom Request & Secure Premium Spot"'}
+),
+k.jsx("div",
+{
+className:"w-full h-5 bg-zinc-950 border border-zinc-800 rounded flex items-center text-left text-[
+8px]
+px-2 text-zinc-500 font-sans",
+children:"Type current cell number / email here..."}
+),
+k.jsx("div",
+{
+className:"w-full bg-emerald-500 text-zinc-950 font-bold text-center py-1 rounded text-[
+9px]
+mt-1 font-sans",
+children:"Request Free Blueprint Mockup Now"}
+)]
+}
+)]
+}
+),
+k.jsxs("button",
+{
+onClick:()=>o(c.id,
+f),
+className:"w-full py-4.5 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-sans font-bold text-sm tracking-wide rounded-2xl cursor-pointer shadow-lg shadow-emerald-500/15 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[
+1.01]
+",
+children:[
+k.jsx(g2,
+{
+className:"w-4.5 h-4.5"}
+),
+k.jsx("span",
+{
+children:"Generate Free Custom Mockup for My Business"}
+)]
+}
+)]
+}
+)]
+}
+)]
+}
+)}
+function Gfe({
+isOpen:o,
+onClose:c,
+initialIndustryId:r,
+initialSelectedFeatures:s=[
+]
+}
+){
+var $e;
+const[
+h,
+p]
+=E.useState(1),
+[
+y,
+f]
+=E.useState(""),
+[
+M,
+m]
+=E.useState(r||ia[
+0]
+.id),
+[
+v,
+x]
+=E.useState(""),
+[
+_,
+S]
+=E.useState(""),
+[
+z,
+T]
+=E.useState("emerald"),
+[
+V,
+j]
+=E.useState("minimal"),
+[
+O,
+U]
+=E.useState(""),
+[
+P,
+ee]
+=E.useState(""),
+[
+ie,
+G]
+=E.useState([
+]
+),
+[
+Z,
+ne]
+=E.useState(0),
+[
+te,
+he]
+=E.useState(!1);
+E.useEffect(()=>{
+r&&m(r)}
+,
+[
+r]
+);
+const Me=()=>{
+if(!y.trim()){
+alert("Please enter your business name.");
+return}
+if(!v.trim()){
+alert("Please enter your local city or zip code.");
+return}
+p(2),
+he(!0),
+G([
+]
+),
+ne(0)}
+,
+Ue=[
+"[
+SYSTEM]
+Connecting to Google Lighthouse API server...",
+`[
+DISPATCH]
+Analyzing search volume for "${
+(($e=ia.find(C=>C.id===M))==null?void 0:$e.name)||"Local Service"}
+" in ZIP: ${
+v}
+...`,
+"[
+INFO]
+Average competitor page-load speed: 3.8s (Wix/Wordpress baseline)",
+"[
+BENCHMARK]
+Competitor mobile bounce rate: 64% due to poor formatting",
+"[
+SEO]
+Injecting custom BLODES JSON-LD schema microdata for localized rankings...",
+"[
+INTEGRATION]
+Pre-compiling static asset routes with Vite bundler...",
+`[
+BUILD]
+Designing interactive user experience blueprint for "${
+y}
+"...`,
+"[
+SUCCESS]
+100/100 Mobile Speed Frame draft generated!"]
+;
+E.useEffect(()=>{
+if(!(!te||h!==2))if(Z<Ue.length){
+const C=setTimeout(()=>{
+G(F=>[
+...F,
+Ue[
+Z]
+]
+),
+ne(Z+1)}
+,
+750);
+return()=>clearTimeout(C)}
+else{
+const C=setTimeout(()=>{
+he(!1),
+p(3)}
+,
+1e3);
+return()=>clearTimeout(C)}
+}
+,
+[
+te,
+Z,
+h]
+);
+const He=C=>{
+if(C.preventDefault(),
+!O.trim()||!P.trim()){
+alert("Please fill out your contact details so we can deliver your custom blueprint.");
+return}
+p(4)}
+;
+return o?k.jsxs("div",
+{
+className:"fixed inset-0 z-50 flex items-center justify-center p-4",
+children:[
+k.jsx("div",
+{
+onClick:c,
+className:"absolute inset-0 bg-zinc-950/70 backdrop-blur-md transition-opacity duration-300"}
+),
+k.jsxs("div",
+{
+className:"relative w-full max-w-lg overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 p-6 md:p-8 shadow-2xl z-10 text-white flex flex-col gap-4",
+children:[
+k.jsxs("div",
+{
+className:"flex justify-between items-center pb-2 border-b border-zinc-900",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center gap-2",
+children:[
+k.jsx("div",
+{
+className:"w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"}
+),
+k.jsx("span",
+{
+className:"text-xs font-mono text-zinc-400 font-semibold uppercase tracking-wider",
+children:"BLODES Instant Sandbox Studio"}
+)]
+}
+),
+k.jsx("button",
+{
+onClick:c,
+className:"p-1 rounded-lg text-zinc-500 hover:text-white hover:bg-zinc-900 transition-colors",
+children:k.jsx(H0,
+{
+className:"w-5 h-5"}
+)}
+)]
+}
+),
+k.jsxs(CD,
+{
+mode:"wait",
+children:[
+h===1&&k.jsxs(oa.div,
+{
+initial:{
+opacity:0,
+x:-10}
+,
+animate:{
+opacity:1,
+x:0}
+,
+exit:{
+opacity:0,
+x:10}
+,
+className:"flex flex-col gap-4",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col",
+children:[
+k.jsxs("h3",
+{
+className:"text-xl font-medium tracking-tight text-white flex items-center gap-1.5 leading-tight",
+children:[
+k.jsx(C1,
+{
+className:"w-5 h-5 text-emerald-400"}
+),
+"Request Free Custom Layout Draft"]
+}
+),
+k.jsx("p",
+{
+className:"text-xs text-zinc-400 mt-1 leading-relaxed",
+children:"We don't send template PDFs. Give us 24 hours and our team will build you an actual,
+interactive,
+custom desktop/mobile mockup of your primary landing page for free."}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-3 mt-2",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsx("label",
+{
+className:"text-xs font-medium text-zinc-300",
+children:"Your Business Name *"}
+),
+k.jsxs("div",
+{
+className:"relative",
+children:[
+k.jsx(b0,
+{
+className:"absolute left-3.5 top-3.5 w-4 h-4 text-zinc-500"}
+),
+k.jsx("input",
+{
+type:"text",
+required:!0,
+placeholder:"e.g. Oak Creek Kitchens & Cabinets",
+value:y,
+onChange:C=>f(C.target.value),
+className:"w-full bg-zinc-900/60 border border-zinc-850 rounded-xl py-3 pl-10 pr-4 text-sm text-white placeholder-zinc-550 focus:border-emerald-500 focus:outline-none transition-colors"}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"grid grid-cols-1 sm:grid-cols-2 gap-3",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsx("label",
+{
+className:"text-xs font-medium text-zinc-300 font-sans",
+children:"Industry Category"}
+),
+k.jsx("select",
+{
+value:M,
+onChange:C=>m(C.target.value),
+className:"w-full bg-zinc-900/60 border border-zinc-850 rounded-xl py-3 px-3 text-xs text-white focus:border-emerald-500 focus:outline-none transition-colors",
+children:ia.map(C=>k.jsx("option",
+{
+value:C.id,
+className:"bg-zinc-950 text-white",
+children:C.name}
+,
+C.id))}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsx("label",
+{
+className:"text-xs font-medium text-zinc-300",
+children:"Target Zip / City *"}
+),
+k.jsxs("div",
+{
+className:"relative",
+children:[
+k.jsx(j0,
+{
+className:"absolute left-3 top-3.5 w-3.5 h-3.5 text-zinc-500"}
+),
+k.jsx("input",
+{
+type:"text",
+required:!0,
+placeholder:"e.g. Boise,
+ID or 83702",
+value:v,
+onChange:C=>x(C.target.value),
+className:"w-full bg-zinc-900/60 border border-zinc-850 rounded-xl py-3 pl-9 pr-3 text-xs text-white placeholder-zinc-550 focus:border-emerald-500 focus:outline-none transition-colors"}
+)]
+}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsxs("div",
+{
+className:"flex justify-between items-center",
+children:[
+k.jsx("label",
+{
+className:"text-xs font-medium text-zinc-300",
+children:"Current Site URL"}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+text-zinc-500 font-mono",
+children:"(Optional)"}
+)]
+}
+),
+k.jsx("input",
+{
+type:"url",
+placeholder:"e.g. www.oldcontractorwixsite.com",
+value:_,
+onChange:C=>S(C.target.value),
+className:"w-full bg-zinc-900/60 border border-zinc-850 rounded-xl py-3 px-4 text-xs text-white placeholder-zinc-550 focus:border-emerald-500 focus:outline-none transition-colors"}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+text-zinc-500 font-sans leading-tight",
+children:"Type 'None' or leave blank if starting your business from scratch!"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"grid grid-cols-2 gap-3 mt-1.5 bg-zinc-900/10 p-3.5 rounded-xl border border-zinc-900/60",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col gap-3",
+children:[
+k.jsx("span",
+{
+className:"text-[
+10px]
+font-mono font-semibold uppercase tracking-wider text-zinc-500",
+children:"Color Palette Theme:"}
+),
+k.jsxs("div",
+{
+className:"flex gap-2",
+children:[
+k.jsx("button",
+{
+onClick:()=>T("emerald"),
+className:`w-5 h-5 rounded-full bg-emerald-500 border-2 transition-transform ${
+z==="emerald"?"border-white scale-110":"border-transparent opacity-80"}
+`,
+title:"Vibrant Emerald / Growth"}
+),
+k.jsx("button",
+{
+onClick:()=>T("amber"),
+className:`w-5 h-5 rounded-full bg-amber-500 border-2 transition-transform ${
+z==="amber"?"border-white scale-110":"border-transparent opacity-80"}
+`,
+title:"Warm Bronze / Wood tones"}
+),
+k.jsx("button",
+{
+onClick:()=>T("blue"),
+className:`w-5 h-5 rounded-full bg-blue-500 border-2 transition-transform ${
+z==="blue"?"border-white scale-110":"border-transparent opacity-80"}
+`,
+title:"Hyper-Dispatch Blue & Slate"}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-3",
+children:[
+k.jsx("span",
+{
+className:"text-[
+10px]
+font-mono font-semibold uppercase tracking-wider text-zinc-500",
+children:"Aesthetic Vibe:"}
+),
+k.jsxs("div",
+{
+className:"flex gap-1.5",
+children:[
+k.jsx("button",
+{
+onClick:()=>j("minimal"),
+className:`text-[
+9px]
+px-2 py-1 rounded font-mono border ${
+V==="minimal"?"bg-white text-zinc-950 border-white font-bold":"bg-transparent text-zinc-400 border-zinc-800"}
+`,
+children:"Clean Minimalist"}
+),
+k.jsx("button",
+{
+onClick:()=>j("playful"),
+className:`text-[
+9px]
+px-2 py-1 rounded font-mono border ${
+V==="playful"?"bg-white text-zinc-950 border-white font-bold":"bg-transparent text-zinc-400 border-zinc-800"}
+`,
+children:"Bold Premium"}
+)]
+}
+)]
+}
+)]
+}
+)]
+}
+),
+k.jsxs("button",
+{
+onClick:Me,
+className:"w-full mt-4 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-sans font-bold text-sm tracking-wide rounded-2xl cursor-pointer shadow-lg shadow-emerald-500/10 flex items-center justify-center gap-2 transition-transform active:scale-98",
+children:[
+k.jsx("span",
+{
+children:"Trigger SEO & Layout Compiler"}
+),
+k.jsx(m2,
+{
+className:"w-4 h-4"}
+)]
+}
+)]
+}
+,
+"step1"),
+h===2&&k.jsxs(oa.div,
+{
+initial:{
+opacity:0,
+scale:.95}
+,
+animate:{
+opacity:1,
+scale:1}
+,
+exit:{
+opacity:0,
+scale:1.05}
+,
+className:"flex flex-col gap-4 py-8 items-center justify-center text-center",
+children:[
+k.jsxs("div",
+{
+className:"relative w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-2",
+children:[
+k.jsx(g2,
+{
+className:"w-8 h-8 text-emerald-400 animate-spin",
+style:{
+animationDuration:"4s"}
+}
+),
+k.jsx("div",
+{
+className:"absolute inset-0 rounded-full border-2 border-emerald-400 border-t-transparent animate-spin"}
+)]
+}
+),
+k.jsx("h3",
+{
+className:"text-lg font-bold tracking-tight text-white leading-tight",
+children:"Evaluating Competitor Landscape..."}
+),
+k.jsxs("p",
+{
+className:"text-xs text-zinc-400 max-w-sm",
+children:[
+"Compiles data,
+speed index frames,
+and structures mapping guidelines matching ",
+y,
+" details."]
+}
+),
+k.jsx("div",
+{
+className:"w-full text-left bg-zinc-900 border border-zinc-800 p-4 rounded-xl font-mono text-[
+10px]
+text-zinc-300 h-44 overflow-y-auto flex flex-col gap-1.5 shadow-inner",
+children:ie.map((C,
+F)=>{
+let Y="text-zinc-400";
+return C.startsWith("[
+SUCCESS]
+")&&(Y="text-emerald-400 font-semibold"),
+C.startsWith("[
+SYSTEM]
+")&&(Y="text-teal-300 font-bold"),
+C.startsWith("[
+INFO]
+")&&(Y="text-amber-400"),
+k.jsx("div",
+{
+className:`${
+Y}
+animate-fade-in`,
+children:C}
+,
+F)}
+)}
+)]
+}
+,
+"step2"),
+h===3&&k.jsxs(oa.div,
+{
+initial:{
+opacity:0,
+y:15}
+,
+animate:{
+opacity:1,
+y:0}
+,
+exit:{
+opacity:0,
+y:-15}
+,
+className:"flex flex-col gap-4",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col text-center items-center py-2",
+children:[
+k.jsx("div",
+{
+className:"w-11 h-11 rounded-full bg-emerald-500/10 text-emerald-450 border border-emerald-500/20 flex items-center justify-center mb-3",
+children:k.jsx(bc,
+{
+className:"w-6 h-6 stroke-[
+3px]
+"}
+)}
+),
+k.jsx("h3",
+{
+className:"text-xl font-bold tracking-tight text-white leading-tight",
+children:"Pre-compiled Draft Ready!"}
+),
+k.jsxs("p",
+{
+className:"text-xs text-zinc-400 mt-1 max-w-sm",
+children:[
+"We compiled an organic search outline for ",
+k.jsxs("span",
+{
+className:"text-white font-semibold",
+children:[
+'"',
+y,
+'"']
+}
+),
+" in city sector ZIP ",
+k.jsx("span",
+{
+className:"text-white font-mono",
+children:v}
+),
+". Secure your digital layout!"]
+}
+)]
+}
+),
+k.jsxs("form",
+{
+onSubmit:He,
+className:"flex flex-col gap-3 mt-1",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsx("label",
+{
+className:"text-xs font-medium text-zinc-300",
+children:"Your Work Email Address *"}
+),
+k.jsx("input",
+{
+type:"email",
+required:!0,
+placeholder:"e.g. name@yourdomain.com",
+value:O,
+onChange:C=>U(C.target.value),
+className:"w-full bg-zinc-900 border border-zinc-850 rounded-xl py-3 px-4 text-xs text-white placeholder-zinc-550 focus:border-emerald-500 focus:outline-none transition-colors"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsx("label",
+{
+className:"text-xs font-medium text-zinc-300 font-sans",
+children:"SMS / Cell Number for Delivery *"}
+),
+k.jsx("input",
+{
+type:"tel",
+required:!0,
+placeholder:"e.g. (208) 555-0199",
+value:P,
+onChange:C=>ee(C.target.value),
+className:"w-full bg-zinc-900 border border-zinc-850 rounded-xl py-3 px-4 text-xs text-white placeholder-zinc-550 focus:border-emerald-500 focus:outline-none transition-colors"}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+text-zinc-500 leading-tight",
+children:"We will text you a live private test link to view the demo version directly on your smartphone screen in 24 hours."}
+)]
+}
+),
+k.jsxs("button",
+{
+type:"submit",
+className:"w-full mt-3 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-sans font-bold text-sm tracking-wide rounded-2xl cursor-pointer shadow-lg shadow-emerald-500/10 flex items-center justify-center gap-2",
+children:[
+k.jsx($0,
+{
+className:"w-4 h-4"}
+),
+k.jsx("span",
+{
+children:"Finalize Mockup Allocation"}
+)]
+}
+)]
+}
+)]
+}
+,
+"step3"),
+h===4&&k.jsxs(oa.div,
+{
+initial:{
+opacity:0,
+scale:.95}
+,
+animate:{
+opacity:1,
+scale:1}
+,
+className:"flex flex-col gap-4 text-center items-center py-6",
+children:[
+k.jsxs("div",
+{
+className:"relative",
+children:[
+k.jsx("div",
+{
+className:"w-16 h-16 rounded-full bg-emerald-500 text-zinc-950 flex items-center justify-center shadow-lg shadow-emerald-500/20",
+children:k.jsx(C1,
+{
+className:"w-8 h-8 fill-zinc-950/10"}
+)}
+),
+k.jsx("span",
+{
+className:"absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"}
+),
+k.jsx("span",
+{
+className:"absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-emerald-400 animate-pulse",
+style:{
+animationDelay:"0.5s"}
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5 mt-2",
+children:[
+k.jsx("h3",
+{
+className:"text-xl font-bold tracking-tight text-white leading-tight",
+children:"Draft Successfully Reserved!"}
+),
+k.jsxs("p",
+{
+className:"text-xs tracking-wide text-emerald-400 font-mono",
+children:[
+"CONFIRMATION CODE: #BLD-",
+Math.floor(Math.random()*89999+1e4)]
+}
+),
+k.jsxs("p",
+{
+className:"text-xs text-zinc-300 max-w-sm mt-1.5 leading-relaxed",
+children:[
+"Thank you,
+",
+k.jsx("span",
+{
+className:"text-white font-semibold",
+children:y}
+),
+"! Our web engineers have allocated the template drafts and color presets matching your ",
+k.jsxs("span",
+{
+className:"text-emerald-300 font-mono",
+children:[
+'"',
+z,
+'"']
+}
+),
+" brand."]
+}
+),
+k.jsxs("p",
+{
+className:"text-[
+11px]
+text-zinc-500 max-w-sm leading-relaxed mt-1",
+children:[
+"We are preparing a fully responsive,
+custom-coded web interface. One of our lead developers will reach out via ",
+k.jsx("span",
+{
+className:"text-zinc-300 font-medium",
+children:O}
+),
+" or SMS at ",
+k.jsx("span",
+{
+className:"text-zinc-300 font-medium",
+children:P}
+),
+" to request any high-res photos or work logo files you want integrated."]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"w-full mt-4 bg-zinc-900/60 border border-zinc-850 p-4.5 rounded-2xl flex flex-col gap-2 text-left",
+children:[
+k.jsx("span",
+{
+className:"text-[
+10px]
+font-mono font-bold uppercase tracking-wider text-zinc-400",
+children:"NEXT IMMEDIATE STEPS:"}
+),
+k.jsxs("div",
+{
+className:"flex items-start gap-2.5 text-xs text-zinc-300",
+children:[
+k.jsx("span",
+{
+className:"text-emerald-400 mt-0.5",
+children:"1."}
+),
+k.jsx("span",
+{
+children:"Check your spam folder in 15 mins for our automatic local competitor breakdown."}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex items-start gap-2.5 text-xs text-zinc-300",
+children:[
+k.jsx("span",
+{
+className:"text-emerald-400 mt-0.5",
+children:"2."}
+),
+k.jsx("span",
+{
+children:"Locate high-res photos of your latest completed work (or menus,
+price indices)."}
+)]
+}
+)]
+}
+),
+k.jsx("button",
+{
+onClick:c,
+className:"w-full mt-2 py-3 bg-zinc-900 hover:bg-zinc-850 text-zinc-300 font-sans font-bold text-xs rounded-xl cursor-pointer",
+children:"Return to Live Showroom"}
+)]
+}
+,
+"step4")]
+}
+)]
+}
+)]
+}
+):null}

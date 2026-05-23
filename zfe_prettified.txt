@@ -1,0 +1,516 @@
+function Zfe({
+onSelectPlan:o}
+){
+const[
+c,
+r]
+=E.useState("all"),
+h=[
+{
+name:"The Kickstarter Scope",
+tagline:"Perfect for single owner-operators or local startups looking to establish an immediate high-speed footprint.",
+deliveryTime:"Within 24 Hours",
+complexityIndex:"Core Setup",
+targetOutcome:"Launch baseline local trust and instant click-to-call mobile features.",
+icon:wc,
+features:[
+"1-Page High-Conversion Craft Speed Site",
+"100/100 Mobile Page Speed Index score",
+"Google Business Profile Linkage & Optimization",
+"1-Tap Urgent Call & Contact Intake Form",
+"Basic Local Off-Page SEO Metadata",
+"Continuous Secured Server Deployments"]
+,
+popular:!1,
+ctaText:"Start Kickstarter Blueprint"}
+,
+{
+name:"The Business Engine Scope",
+tagline:"Our most requested tier. Customized for local businesses looking to automate consultations & client bookings.",
+deliveryTime:"Within 24 Hours",
+complexityIndex:"Active Expansion",
+targetOutcome:"Automate leads from map queries directly to your smartphone.",
+icon:M2,
+features:[
+"Multi-page Authority Layout Structure (up to 5 pages)",
+"Interactive Before/After slider comparator module",
+"Automated Calendar Booking Scheduler support",
+"5-Star Google Business Reviews Stream Loop",
+"Local Competitor Suburban Geographic Keyword Schema",
+"Instant SMS Lead Dispatcher to your technician's mobile",
+"Ongoing Webmaster direct-refresh priority line"]
+,
+popular:!0,
+ctaText:"Claim Business Engine Blueprint"}
+,
+{
+name:"The Local Dominator Scope",
+tagline:"For ambitious multi-location local networks,
+medical groups,
+and premium professional advisors.",
+deliveryTime:"Within 24 Hours",
+complexityIndex:"Market Capture",
+targetOutcome:"Capture multiple surrounding suburbs and outrank local franchises.",
+icon:f2,
+features:[
+"Custom Multi-Hub Expansion (unlimited page layout modules)",
+"Dedicated Suburban Lander Networks to rank in every district",
+"Advanced Interactive Intake Calculators & auto-generated customer PDFs",
+"Priority VIP Direct Webmaster SMS Dispatch support",
+"Custom Media Production: Curation of Professional Asset Packs",
+"High-End Competitor Traffic Siphoning Audit Reports"]
+,
+popular:!1,
+ctaText:"Request Domination Scoping"}
+]
+.filter(p=>c==="all"?!0:c==="essential"?!p.popular:p.popular);
+return k.jsxs("div",
+{
+className:"flex flex-col gap-6 w-full",
+children:[
+k.jsxs("div",
+{
+className:"flex flex-col items-center justify-center gap-3",
+children:[
+k.jsxs("div",
+{
+className:"inline-flex items-center bg-zinc-900 border border-zinc-850 p-1.5 rounded-2xl",
+children:[
+k.jsx("button",
+{
+onClick:()=>r("all"),
+className:`px-4 py-2 text-xs font-semibold font-sans rounded-xl cursor-pointer transition-colors ${
+c==="all"?"bg-zinc-800 text-white shadow":"bg-transparent text-zinc-500 hover:text-zinc-350"}
+`,
+children:"Show All Scopes"}
+),
+k.jsx("button",
+{
+onClick:()=>r("essential"),
+className:`px-4 py-2 text-xs font-semibold font-sans rounded-xl cursor-pointer transition-colors ${
+c==="essential"?"bg-zinc-800 text-white shadow":"bg-transparent text-zinc-500 hover:text-zinc-350"}
+`,
+children:"Core / Enterprise"}
+),
+k.jsxs("button",
+{
+onClick:()=>r("advanced"),
+className:`px-4 py-2 text-xs font-semibold font-sans rounded-xl cursor-pointer transition-colors flex items-center gap-1.5 ${
+c==="advanced"?"bg-emerald-500 text-zinc-950 font-bold shadow":"bg-transparent text-zinc-500 hover:text-zinc-350"}
+`,
+children:[
+k.jsx("span",
+{
+children:"Active Growth"}
+),
+k.jsx("span",
+{
+className:"text-[
+9px]
+bg-zinc-950 text-emerald-400 px-1.5 py-0.5 rounded-md font-mono font-bold",
+children:"Most Popular"}
+)]
+}
+)]
+}
+),
+k.jsx("p",
+{
+className:"text-xs text-zinc-400 max-w-xl text-center leading-relaxed",
+children:"Each roadmap incorporates our high-performance core engine code with no monthly template subscription overhead."}
+)]
+}
+),
+k.jsx("div",
+{
+className:"grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mt-3",
+children:h.map(p=>{
+const y=p.icon;
+return k.jsxs("div",
+{
+className:`relative flex flex-col gap-6 p-6 rounded-3xl border transition-all duration-300 ${
+p.popular?"bg-zinc-900/40 border-emerald-500/40 shadow-[
+0_4px_30px_rgba(16,
+185,
+129,
+0.08)]
+ring-1 ring-emerald-500/40":"bg-zinc-950/45 border-zinc-900 shadow-lg"}
+`,
+children:[
+p.popular&&k.jsxs("div",
+{
+className:"absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-zinc-950 text-[
+10px]
+font-mono font-bold tracking-wider uppercase px-4 py-1 rounded-full shadow-lg flex items-center gap-1",
+children:[
+k.jsx(M2,
+{
+className:"w-3.5 h-3.5 fill-zinc-950"}
+),
+k.jsx("span",
+{
+children:"PREFERED VALUE ROADMAP"}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1.5",
+children:[
+k.jsxs("div",
+{
+className:"flex justify-between items-center",
+children:[
+k.jsx("h4",
+{
+className:"text-base sm:text-lg font-bold tracking-tight text-white",
+children:p.name}
+),
+k.jsx("div",
+{
+className:`p-1.5 rounded-lg ${
+p.popular?"bg-emerald-500/10 text-emerald-400":"bg-zinc-900 text-zinc-400"}
+`,
+children:k.jsx(y,
+{
+className:"w-5 h-5"}
+)}
+)]
+}
+),
+k.jsx("p",
+{
+className:"text-xs text-zinc-400 min-h-[
+50px]
+leading-relaxed mt-1",
+children:p.tagline}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col border-y border-zinc-900 py-4.5 gap-2.5 font-mono",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center justify-between text-xs",
+children:[
+k.jsxs("span",
+{
+className:"text-zinc-500 flex items-center gap-1",
+children:[
+k.jsx(N0,
+{
+className:"w-3.5 h-3.5 text-zinc-500"}
+),
+"Target Launch Time:"]
+}
+),
+k.jsx("span",
+{
+className:"text-white font-bold",
+children:p.deliveryTime}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex items-center justify-between text-xs",
+children:[
+k.jsxs("span",
+{
+className:"text-zinc-500 flex items-center gap-1",
+children:[
+k.jsx(C0,
+{
+className:"w-3.5 h-3.5 text-zinc-500"}
+),
+"System Complexity:"]
+}
+),
+k.jsx("span",
+{
+className:"text-emerald-450 font-bold",
+children:p.complexityIndex}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-1 mt-1 border-t border-zinc-900/50 pt-2 text-[
+11px]
+leading-relaxed",
+children:[
+k.jsx("span",
+{
+className:"text-zinc-500 uppercase tracking-widest font-mono text-[
+9px]
+font-bold",
+children:"Primary Outcome goal:"}
+),
+k.jsx("span",
+{
+className:"text-zinc-350",
+children:p.targetOutcome}
+)]
+}
+)]
+}
+),
+k.jsxs("div",
+{
+className:"flex flex-col gap-3 flex-1",
+children:[
+k.jsx("span",
+{
+className:"text-[
+10px]
+font-mono uppercase tracking-widest text-zinc-400 font-bold",
+children:"Blueprint Specs:"}
+),
+k.jsx("ul",
+{
+className:"flex flex-col gap-2.5",
+children:p.features.map(f=>k.jsxs("li",
+{
+className:"flex items-start gap-2.5 text-xs text-zinc-300",
+children:[
+k.jsx("span",
+{
+className:"mt-0.5 p-0.5 rounded-full bg-emerald-500/10 text-emerald-450 shrink-0 border border-emerald-500/10",
+children:k.jsx(bc,
+{
+className:"w-3 h-3 stroke-[
+2.5px]
+"}
+)}
+),
+k.jsx("span",
+{
+className:"leading-normal",
+children:f}
+)]
+}
+,
+f))}
+)]
+}
+),
+k.jsx("button",
+{
+onClick:()=>o(p.name),
+className:`w-full py-4.5 rounded-2xl font-sans font-bold text-xs tracking-wide cursor-pointer transition-all duration-300 flex items-center justify-center gap-1.5 hover:scale-[
+1.01]
+active:scale-98 ${
+p.popular?"bg-emerald-500 hover:bg-emerald-400 text-zinc-950 shadow-md shadow-emerald-500/15":"bg-zinc-900 hover:bg-zinc-850 text-zinc-200 border border-zinc-800"}
+`,
+children:k.jsx("span",
+{
+children:p.ctaText}
+)}
+)]
+}
+,
+p.name)}
+)}
+),
+k.jsxs("div",
+{
+className:"text-center mt-3 text-xs text-zinc-500 font-sans",
+children:[
+"Looking for third-party ERP integration or fully bespoke software database designs?",
+" ",
+k.jsx("span",
+{
+onClick:()=>o("Custom Plan"),
+className:"text-emerald-400 font-semibold underline underline-offset-3 cursor-pointer hover:text-emerald-300",
+children:"Book a direct scoping session"}
+)]
+}
+)]
+}
+)}
+const Xfe="/src/assets/images/agency_hero_1779467342329.png",
+Yfe="/src/assets/images/business_mockups_1779467360570.png";
+function Kfe(){
+const[
+o,
+c]
+=E.useState(!1),
+[
+r,
+s]
+=E.useState("contracting"),
+[
+h,
+p]
+=E.useState([
+]
+),
+[
+y,
+f]
+=E.useState("contracting"),
+[
+M,
+m]
+=E.useState(0),
+v=E.useRef(null),
+x=E.useRef(null),
+_=E.useRef(null),
+S=j=>{
+j.current&&j.current.scrollIntoView({
+behavior:"smooth",
+block:"start"}
+)}
+,
+z=(j="contracting",
+O=[
+]
+)=>{
+s(j),
+p(O),
+c(!0)}
+,
+T=[
+{
+q:"Why should I hire BLODES instead of just building a quick site on Wix or Squarespace?",
+a:"DIY builders write heavy,
+bloated,
+generic code that takes 3 to 6 seconds to load. Modern google algorithms penalize slow loading times—meaning you rank lower on Maps and search. A BLODES website loads in under 0.4 seconds,
+features clean custom code,
+is fully managed,
+and is structured precisely to guide users toward tapping the 'Call Now' button."}
+,
+{
+q:"Do you write all the wording and find the pictures,
+or do we have to design it?",
+a:"We do 100% of the heavy lifting. Our specialized team writes all the persuasive,
+local-SEO-targeted marketing copy,
+sources and licenses matching premium high-res media,
+and installs high-conversion widgets for you. You of course get final approval over all text and imagery before launching!"}
+,
+{
+q:"How do I make changes or update my site when things change later?",
+a:"No more wrestling with confusing editors. Whenever you have a new project photo to add,
+operational business hour updates,
+or an announcement,
+simply text or email your dedicated BLODES direct link support line. We complete and deploy your changes within 1 hour,
+at no extra cost,
+included in your scoping engagement."}
+,
+{
+q:"How long does the process take from start to launching live?",
+a:"No more long wait times. Once you submit your request,
+we completely prepare,
+custom-code,
+and launch your final high-performance website live on your personal domain in under 24 hours!"}
+,
+{
+q:"What does our continuous support scope include?",
+a:"Our comprehensive support scope goes beyond standard raw hosting. It includes hyper-fast global server routing,
+SSL enterprise grade certification,
+schema search sync,
+active security firewalls,
+monthly localized backup cycles,
+and unlimited content/hours updates from our professional web developers."}
+]
+,
+V=ia.find(j=>j.id===y)||ia[
+0]
+;
+return k.jsxs("div",
+{
+className:"min-h-screen bg-zinc-950 text-white font-sans selection:bg-emerald-500 selection:text-zinc-950 flex flex-col antialiased",
+children:[
+k.jsx("div",
+{
+className:"bg-gradient-to-r from-red-950 via-zinc-900 to-emerald-950 border-b border-zinc-900 px-4 py-2.5 text-center text-xs text-zinc-300 font-sans tracking-tight relative z-20",
+children:k.jsxs("span",
+{
+className:"inline-flex items-center gap-1.5 flex-wrap justify-center",
+children:[
+k.jsx("span",
+{
+className:"w-2 h-2 rounded-full bg-red-500 animate-pulse"}
+),
+k.jsx("span",
+{
+className:"font-semibold text-white",
+children:"Attention Local Business Owners:"}
+),
+"A slow,
+complex generic site can leak up to 48% of your call volume.",
+k.jsx("span",
+{
+onClick:()=>z("contracting"),
+className:"text-emerald-400 underline font-semibold cursor-pointer hover:text-emerald-300 ml-1",
+children:"Claim your 24-hour custom website today →"}
+)]
+}
+)}
+),
+k.jsx("header",
+{
+className:"sticky top-0 z-40 bg-zinc-950/75 backdrop-blur-md border-b border-zinc-900/80 transition-all duration-200",
+children:k.jsxs("div",
+{
+className:"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between",
+children:[
+k.jsxs("div",
+{
+className:"flex items-center gap-3",
+children:[
+k.jsxs("span",
+{
+className:"font-mono text-2xl font-black tracking-tighter text-white select-none flex items-center gap-1",
+children:[
+"BL",
+k.jsx("span",
+{
+className:"text-emerald-400",
+children:"O"}
+),
+"DES"]
+}
+),
+k.jsx("span",
+{
+className:"text-[
+10px]
+font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/15 px-2 py-0.5 rounded-full tracking-wide",
+children:"LOCAL WEB AGENCY"}
+)]
+}
+),
+k.jsxs("nav",
+{
+className:"hidden md:flex items-center gap-6.5 text-sm font-medium text-zinc-400",
+children:[
+k.jsx("button",
+{
+onClick:()=>S(v),
+className:"hover:text-white transition-colors cursor-pointer",
+children:"Interactive Blueprint"}
+),
+k.jsx("button",
+{
+onClick:()=>S(_),
+className:"hover:text-white transition-colors cursor-pointer",
+children:"Client Success"}
+),
+k.jsx("button",
+{
+onClick:()=>S(x),
+className:"hover:text-white transition-colors cursor-pointer",
+children:"Roadmap Scopes"}
+)]
+}
+),
+k.jsx("div",
+{
+className:"flex items-center gap-3",
+children:k.jsx("button",
+{
+onClick:()=>z("contracting"),
+className:"px-4 py-2.5 rounded-xl text-xs font-semibold font-sans bg-emerald-500 hover:b
